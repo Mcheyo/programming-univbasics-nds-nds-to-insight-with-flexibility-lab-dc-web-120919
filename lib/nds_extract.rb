@@ -21,7 +21,7 @@ def flatten_a_o_a(aoa)
 end
 
 def movie_with_director_name(director_name, movie_data)
-  { 
+  {
     :title => movie_data[:title],
     :worldwide_gross => movie_data[:worldwide_gross],
     :release_year => movie_data[:release_year],
@@ -75,10 +75,10 @@ def gross_per_studio(collection)
   # total of all the worldwide_gross numbers for every movie in the input Hash
   result = {}
     i = 0
-  
+
     while i < collection.length do
       movie = collection[i]
-  
+
       if !result[movie[:studio]]
         result[movie[:studio]] = movie[:worldwide_gross]
       else
@@ -86,7 +86,7 @@ def gross_per_studio(collection)
       end
       i += 1
     end
-  
+
     result
 
 end
@@ -114,7 +114,7 @@ def movies_with_directors_set(source)
   end
 
   a_o_a_movies_by_dir
-  
+
 end
 
 # ----------------    End of Your Code Region --------------------
